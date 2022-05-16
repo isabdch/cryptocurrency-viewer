@@ -6,8 +6,8 @@ export default {
 
 <template>
   <header>
-      <img src="" alt="">
-      <h1>Cryptocurrency Viewer</h1>
+    <img src="" alt="" />
+    <h1>Cryptocurrency Viewer</h1>
   </header>
 </template>
 

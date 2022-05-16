@@ -1,11 +1,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
+import { store } from "../../../store";
 
 export default defineComponent({
   name: "CryptocoinSelectbox",
   data() {
     return {
-      cryptocoin_selectbox_initial_value: "bitcoin",
+      store,
     };
   },
 });
@@ -16,7 +17,7 @@ export default defineComponent({
     >Cryptocoin:
     <select
       name="Cryptocoin Selectbox"
-      v-model="cryptocoin_selectbox_initial_value"
+      v-model="store.cryptocoin_selectbox_value"
     >
       <option value="bitcoin">Bitcoin (BTC)</option>
       <option value="cosmos">Cosmos (ATOM)</option>

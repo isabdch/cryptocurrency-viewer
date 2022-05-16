@@ -1,19 +1,13 @@
 <script lang="ts">
-import { api } from "@/api/api";
 import { defineComponent } from "vue";
+import { store } from "../../../store";
 
 export default defineComponent({
   name: "CurrencyComparisonSelectbox",
   data() {
     return {
-      supported_vs_currencies: [""],
-      supported_vs_currencies_initial_value: "usd",
+      store,
     };
-  },
-  mounted() {
-    api
-      .get("simple/supported_vs_currencies")
-      .then((res) => (this.supported_vs_currencies = res.data));
   },
 });
 </script>
@@ -23,11 +17,14 @@ export default defineComponent({
     >Price in
     <select
       name="Currency Comparison Selectbox"
-      v-model="supported_vs_currencies_initial_value"
+      v-model="store.supported_vs_currencies_value"
     >
-      <option v-for="currency in supported_vs_currencies" :value="currency">
-        {{ currency.toLocaleUpperCase() }}
-      </option>
+      <option value="usd">USD</option>
+      <option value="brl">BRL</option>
+      <option value="eur">EUR</option>
+      <option value="gbp">GBP</option>
+      <option value="btc">BTC</option>
+      <option value="eth">ETH</option>
     </select>
   </label>
 </template>
