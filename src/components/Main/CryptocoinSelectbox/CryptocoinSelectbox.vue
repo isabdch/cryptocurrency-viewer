@@ -9,6 +9,19 @@ export default defineComponent({
       store,
     };
   },
+  created() {
+    localStorage.getItem("cryptocoin_selectbox_value")
+      ? (store.cryptocoin_selectbox_value = JSON.parse(
+          localStorage.getItem("cryptocoin_selectbox_value")!
+        ))
+      : null;
+  },
+  updated() {
+    localStorage.setItem(
+      "cryptocoin_selectbox_value",
+      JSON.stringify(this.store.cryptocoin_selectbox_value)
+    );
+  },
 });
 </script>
 
