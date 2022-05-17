@@ -16,6 +16,7 @@ export default {
 
 header {
   @include flexUtil(row, flex-start, center, 10px);
+  width: 100vw;
   padding: 20px;
   padding-left: 50px;
 
@@ -30,6 +31,11 @@ header {
   img {
     width: 3vw;
     min-width: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 1.1vw;
+    gap: 1vw;
   }
 
   @media screen and (max-width: 768px) {

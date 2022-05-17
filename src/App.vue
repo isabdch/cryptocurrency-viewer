@@ -42,4 +42,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  @include flexUtil(column, flex-start, center, 0px);
+}
 </style>

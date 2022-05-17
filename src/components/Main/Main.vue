@@ -120,9 +120,12 @@ export default defineComponent({
 main {
   width: fit-content;
   margin: auto;
+  border: 1px solid;
 
   section {
     background: $container_bg_color;
+    padding: 30px;
+    border-radius: 1.5em;
   }
 
   @media screen and (min-width: 768px) {
