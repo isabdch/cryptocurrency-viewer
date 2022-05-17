@@ -78,7 +78,7 @@ export default defineComponent({
 
       <div class="cryptocoin_info">
         <h1>
-          {{ `${store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}]} ${store.supported_vs_currencies_value.toUpperCase()}` }}
+          {{ `${store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}]}${store.supported_vs_currencies_value.toUpperCase()}` }}
         </h1>
 
         <CurrencyComparisonSelectbox />
@@ -114,4 +114,21 @@ export default defineComponent({
   </main>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "../../styles/variables.scss";
+
+main {
+  width: fit-content;
+  margin: auto;
+
+  section {
+    background: $container_bg_color;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 425px) {
+  }
+}
+</style>

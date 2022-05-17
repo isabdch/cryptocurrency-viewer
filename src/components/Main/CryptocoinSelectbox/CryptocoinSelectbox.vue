@@ -41,4 +41,6 @@ export default defineComponent({
   </label>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "../../../styles/variables.scss";
+</style>
