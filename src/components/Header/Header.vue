@@ -19,9 +19,10 @@ header {
   width: 100vw;
   padding: 20px;
   padding-left: 50px;
+  animation: showFromTopToBottom 0.5s ease 0s 1 normal both;
 
   h1 {
-    background-image: linear-gradient(to right, #11998e, #97f600);
+    background-image: linear-gradient(to right, $darker_text_color, $vibrant_text_color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

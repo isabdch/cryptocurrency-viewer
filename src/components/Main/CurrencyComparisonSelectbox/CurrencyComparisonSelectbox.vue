@@ -27,7 +27,7 @@ export default defineComponent({
 
 <template>
   <label class="currency_comparison_selectbox"
-    >Price in
+    >Price in:
     <select
       name="Currency Comparison Selectbox"
       v-model="store.supported_vs_currencies_value"
