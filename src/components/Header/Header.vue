@@ -22,11 +22,11 @@ header {
   animation: showFromTopToBottom 0.5s ease 0s 1 normal both;
 
   h1 {
-    background-image: linear-gradient(to right, $darker_text_color, $vibrant_text_color);
+    background-image: linear-gradient($darker_text_color, $vibrant_text_color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: red;
+    color: $vibrant_text_color;
   }
 
   img {

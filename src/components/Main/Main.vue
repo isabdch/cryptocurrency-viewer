@@ -82,7 +82,9 @@ export default defineComponent({
 
       <div class="cryptocoin_info">
         <h1>
-          {{ `${Number(store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}])}`
+          {{ `${Number(store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}]).toFixed(8)}`
+
+
           }}<span>{{
             `${store.supported_vs_currencies_value.toUpperCase()}`
           }}</span>
@@ -114,7 +116,7 @@ export default defineComponent({
                 .split("-")
                 .reverse()
                 .join("/")}`
-            : "Now"
+            : "Price now"
         }}</span>
       </div>
     </section>
@@ -133,20 +135,20 @@ main {
   width: 100%;
   margin: auto;
   color: $general_text_color;
-  @include flexUtil(column, center, center, 10px);
+  @include flexUtil(column, center, center, 1em);
 
   section {
     width: 65%;
     min-height: fit-content;
     background: $container_bg_color;
     box-shadow: 1px 1px 10px $shadow_container_color;
-    padding: 30px;
+    padding: 2em;
     border-radius: 1.5em;
     @include flexUtil(column, space-between, flex-start, inherit);
 
     div {
       width: 100%;
-      @include flexUtil(row wrap, space-between, center, 20px);
+      @include flexUtil(row, space-between, center, 1.5em);
 
       span {
         span {
@@ -160,12 +162,19 @@ main {
     }
 
     h2 {
-      margin-top: 30px;
+      margin-top: 1.5em;
+      background-image: linear-gradient(
+        $darker_text_color,
+        $vibrant_text_color
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       color: $darker_text_color;
     }
 
     .cryptocoin_info {
-      margin-bottom: 30px;
+      margin-bottom: 1.5em;
 
       h1 {
         color: $vibrant_text_color;
@@ -182,6 +191,10 @@ main {
     @media screen and (max-width: 768px) {
       width: 85%;
     }
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 1.11vw;
   }
 }
 </style>

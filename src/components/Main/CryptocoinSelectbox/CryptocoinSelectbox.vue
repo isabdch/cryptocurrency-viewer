@@ -29,6 +29,7 @@ export default defineComponent({
   <label class="cryptocoin_selectbox"
     >Cryptocoin:
     <select
+      class="cryptocoin_select_input"
       name="Cryptocoin Selectbox"
       v-model="store.cryptocoin_selectbox_value"
     >
@@ -43,4 +44,36 @@ export default defineComponent({
 
 <style lang="scss">
 @import "../../../styles/variables.scss";
+
+label {
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 4.5vw;
+    min-width: 60px;
+    background: $bg_color url("../../../../public/arrow_icon.svg") no-repeat
+      right;
+    background-size: 0.8em;
+    background-origin: content-box;
+    padding: 0.5em;
+    color: $general_text_color;
+    outline: none;
+    border: 0.15em solid $darker_text_color;
+    border-radius: 0.6em;
+
+    &.cryptocoin_select_input {
+      width: 10.4vw;
+      min-width: 140px;
+    }
+
+    &:focus {
+      border: 0.15em solid $vibrant_text_color;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 0.9vw;
+    }
+  }
+}
 </style>

@@ -69,4 +69,23 @@ export default defineComponent({
 
 <style lang="scss">
 @import "../../../styles/variables.scss";
+
+label {
+  input {
+    padding: 0.5em;
+    background: $bg_color;
+    color: $general_text_color;
+    outline: none;
+    border: 0.15em solid $darker_text_color;
+    border-radius: 0.6em;
+
+    &:focus {
+      border: 0.15em solid $vibrant_text_color;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 0.9vw;
+    }
+  }
+}
 </style>
