@@ -42,3 +42,11 @@ export default defineComponent({
   </label>
 </template>
 
+<style lang="scss">
+@import "../../../styles/variables.scss";
+
+.currency_comparison_selectbox {
+  animation: showFromRightToLeft 1.2s ease 0s 1 normal both;
+}
+</style>
+

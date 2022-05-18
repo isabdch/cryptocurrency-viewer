@@ -46,6 +46,8 @@ export default defineComponent({
 @import "../../../styles/variables.scss";
 
 label {
+  text-align: center;
+
   select {
     appearance: none;
     -webkit-appearance: none;

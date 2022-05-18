@@ -71,13 +71,25 @@ export default defineComponent({
 @import "../../../styles/variables.scss";
 
 label {
-  input {
+  @include flexUtil(row, center, center, 0.5em);
+
+  input[type="date"] {
+    width: 10.4vw;
+    min-width: 140px;
     padding: 0.5em;
-    background: $bg_color;
+    background: $bg_color url("../../../../public/calendar_icon.svg") no-repeat
+      right;
+    background-size: 1.3em;
+    background-origin: content-box;
     color: $general_text_color;
     outline: none;
     border: 0.15em solid $darker_text_color;
     border-radius: 0.6em;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
 
     &:focus {
       border: 0.15em solid $vibrant_text_color;
@@ -86,6 +98,10 @@ label {
     @media screen and (min-width: 1440px) {
       font-size: 0.9vw;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    @include flexUtil(column, center, center, 0.5em);
   }
 }
 </style>

@@ -19,7 +19,7 @@ header {
   width: 100vw;
   padding: 20px;
   padding-left: 50px;
-  animation: showFromTopToBottom 0.5s ease 0s 1 normal both;
+  animation: showFromTopToBottomForBiggerScreens 0.5s ease 0s 1 normal both;
 
   h1 {
     background-image: linear-gradient($darker_text_color, $vibrant_text_color);
@@ -30,8 +30,8 @@ header {
   }
 
   img {
-    width: 3vw;
-    min-width: 40px;
+    width: 2vw;
+    min-width: 30px;
   }
 
   @media screen and (min-width: 1440px) {

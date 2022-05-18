@@ -134,6 +134,7 @@ export default defineComponent({
 main {
   width: 100%;
   margin: auto;
+  padding: 10px;
   color: $general_text_color;
   @include flexUtil(column, center, center, 1em);
 
@@ -144,6 +145,7 @@ main {
     box-shadow: 1px 1px 10px $shadow_container_color;
     padding: 2em;
     border-radius: 1.5em;
+    animation: showScaleUp 0.35s ease 0s 1 normal both;
     @include flexUtil(column, space-between, flex-start, inherit);
 
     div {
@@ -159,9 +161,49 @@ main {
       .price_date {
         color: $vibrant_text_color;
       }
+
+      &.market_info {
+        span {
+          @include flexUtil(row, center, center, 0.5em);
+
+          span {
+            display: inline;
+          }
+
+          @media screen and (max-width: 768px) {
+            @include flexUtil(column, center, center, 0.5em);
+          }
+        }
+
+        &:first-of-type {
+          animation: showFromTopToBottomForBiggerScreens 1.2s ease 0s 1 normal
+            both;
+
+          @media screen and (max-width: 1024px) {
+            animation: showFromTopToBottomForSmallerScreens 1.2s ease 0s 1
+              normal both;
+          }
+        }
+
+        &:last-of-type {
+          animation: showFromBottomToTopForBiggerScreens 1.2s ease 0s 1 normal
+            both;
+
+          @media screen and (max-width: 1024px) {
+            animation: showFromBottomToTopForSmallerScreens 1.2s ease 0s 1
+              normal both;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        @include flexUtil(column, space-between, center, 1.5em);
+        text-align: center;
+      }
     }
 
     h2 {
+      width: 100%;
       margin-top: 1.5em;
       background-image: linear-gradient(
         $darker_text_color,
@@ -171,6 +213,11 @@ main {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: $darker_text_color;
+      animation: showFromLeftToRight 1.2s ease 0s 1 normal both;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
 
     .cryptocoin_info {
@@ -180,16 +227,33 @@ main {
         color: $vibrant_text_color;
         font-size: 4em;
         word-break: break-word;
+        word-spacing: 0px;
+        line-height: 0.9em;
+        animation: showFromLeftToRight 1.2s ease 0s 1 normal both;
 
         span {
           color: $darker_text_color;
           font-size: 0.5em;
         }
+
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 85%;
+    }
+  }
+
+  .inputs {
+    @include flexUtil(row, space-between, center, 1.5em);
+    animation: showFromBottomToTopForBiggerScreens 1.2s ease 0s 1 normal both;
+
+    @media screen and (max-width: 768px) {
+      @include flexUtil(column, space-between, center, 1.5em);
+      animation: showFromBottomToTopForSmallerScreens 1.2s ease 0s 1 normal both;
     }
   }
 
