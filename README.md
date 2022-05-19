@@ -25,7 +25,7 @@
 
 ## ✏️ Project Description
 
-This application was developed to demonstrate my skills regarding the technologies used in this project and my logical thinking. This project's intention is to show the price of cryptocurrencies in real-time, and for that I integrated the CoinGecko API, in a way the price automatically updates without the need to refresh the page.
+This application was developed to demonstrate my skills regarding the technologies used in this project and my logical thinking. This project's intention is to show the price of cryptocurrencies in real-time, and for that I integrated the CoinGecko API in a way so that the price automatically updates without the need to refresh the page.
 
 <br />
 
