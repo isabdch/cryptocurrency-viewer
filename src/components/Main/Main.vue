@@ -83,9 +83,7 @@ export default defineComponent({
       <div class="cryptocoin_info">
         <h1>
           {{ `${Number(store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}]).toFixed(8)}`
-
-
-          }}<span>{{
+          }} <span>{{
             `${store.supported_vs_currencies_value.toUpperCase()}`
           }}</span>
         </h1>
@@ -205,13 +203,6 @@ main {
     h2 {
       width: 100%;
       margin-top: 1.5em;
-      background-image: linear-gradient(
-        $darker_text_color,
-        $vibrant_text_color
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       color: $darker_text_color;
       animation: showFromLeftToRight 1.2s ease 0s 1 normal both;
 
