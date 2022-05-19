@@ -17,7 +17,10 @@ export default defineComponent({
     get_cryptocoin_price() {
       api
         .get(`coins/${this.store.cryptocoin_selectbox_value}`)
-        .then((res) => (this.store.cryptocoin = res.data))
+        .then((res) => {
+          this.store.cryptocoin = res.data;
+          console.log(res.data);
+        })
         .catch((err) => console.log(err));
     },
     get_cryptocoin_history() {
@@ -44,7 +47,7 @@ export default defineComponent({
       this.store.view_price_date_value !== ""
         ? this.get_cryptocoin_history()
         : this.get_cryptocoin_price();
-    }, 1700);
+    }, 1200);
   },
   components: {
     CryptocoinSelectbox,
@@ -83,7 +86,8 @@ export default defineComponent({
       <div class="cryptocoin_info">
         <h1>
           {{ `${Number(store.cryptocoin.market_data.current_price[store.supported_vs_currencies_value as keyof {}]).toFixed(8)}`
-          }} <span>{{
+          }}
+          <span>{{
             `${store.supported_vs_currencies_value.toUpperCase()}`
           }}</span>
         </h1>

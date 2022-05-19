@@ -9,19 +9,6 @@ export default defineComponent({
       store,
     };
   },
-  created() {
-    localStorage.getItem("supported_vs_currencies_value")
-      ? (store.supported_vs_currencies_value = JSON.parse(
-          localStorage.getItem("supported_vs_currencies_value")!
-        ))
-      : null;
-  },
-  updated() {
-    localStorage.setItem(
-      "supported_vs_currencies_value",
-      JSON.stringify(this.store.supported_vs_currencies_value)
-    );
-  },
 });
 </script>
 

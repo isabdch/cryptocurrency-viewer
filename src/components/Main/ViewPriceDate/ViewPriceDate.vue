@@ -10,19 +10,6 @@ export default defineComponent({
     };
   },
   methods: {
-    setLocalDate() {
-      localStorage.setItem(
-        "view_price_date_value",
-        JSON.stringify(this.store.view_price_date_value)
-      );
-    },
-    getLocalDate() {
-      localStorage.getItem("view_price_date_value")
-        ? (store.view_price_date_value = JSON.parse(
-            localStorage.getItem("view_price_date_value")!
-          ))
-        : null;
-    },
     setMinDate() {
       // before these dates there is no price info about the cryptocoins, I checked all of them to be sure of it
       switch (this.store.cryptocoin_selectbox_value) {
@@ -45,12 +32,6 @@ export default defineComponent({
           return "2013-04-28";
       }
     },
-  },
-  created() {
-    this.getLocalDate();
-  },
-  updated() {
-    this.setLocalDate();
   },
 });
 </script>
