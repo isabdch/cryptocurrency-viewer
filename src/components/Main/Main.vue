@@ -17,10 +17,7 @@ export default defineComponent({
     get_cryptocoin_price() {
       api
         .get(`coins/${this.store.cryptocoin_selectbox_value}`)
-        .then((res) => {
-          this.store.cryptocoin = res.data;
-          console.log(res.data);
-        })
+        .then((res) => (this.store.cryptocoin = res.data))
         .catch((err) => console.log(err));
     },
     get_cryptocoin_history() {
