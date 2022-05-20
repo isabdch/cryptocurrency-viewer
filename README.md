@@ -25,7 +25,7 @@
 
 ## ✏️ Project Description
 
-This application was developed to demonstrate my skills regarding the technologies used in this project and my logical thinking. This project's intention is to show the price of cryptocurrencies in real-time, and for that I integrated the CoinGecko API, in a way the price automatically updates without the need to refresh the page.
+This application was developed to demonstrate my skills regarding the technologies used in this project and my logical thinking. This project's purpose is to show the price of cryptocurrencies in real-time. For that, I integrated the [CoinGecko API](https://www.coingecko.com/en/api/documentation) in a way that the price automatically updates without the need of refreshing the page.
 
 <br />
 
@@ -34,6 +34,8 @@ This application was developed to demonstrate my skills regarding the technologi
 - ### TypeScript;
 
 - ### VueJs;
+
+- ### Axios;
 
 - ### SCSS;
 
@@ -78,12 +80,12 @@ The user can:
         git branch -M main
         ````
         ```node
-        git remote add origin <your_repository>
+        git remote add origin <your_repository_name>
         ````
          ```node
         git push -u origin main
         ````
-    - Then run:
+    - Then to finally build the project run:
         ```node
         npm run build
         ````
