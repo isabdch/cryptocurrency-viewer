@@ -16,8 +16,8 @@
 - [Project Description](#project-description)
 - [Technologies](#technologies)
 - [Features](#features)
+- [Install and build this project in Local Environment](#install-and-build-this-project-in-local-environment)
 - [Status](#status)
-- [Inspiration](#inspiration)
 
 <br />
 
