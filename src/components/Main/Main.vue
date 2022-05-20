@@ -44,7 +44,7 @@ export default defineComponent({
       this.store.view_price_date_value !== ""
         ? this.get_cryptocoin_history()
         : this.get_cryptocoin_price();
-    }, 1200);
+    }, 1500);
   },
   components: {
     CryptocoinSelectbox,
@@ -53,6 +53,8 @@ export default defineComponent({
   },
 });
 </script>
+
+<!--  -->
 
 <template>
   <main>
@@ -126,6 +128,8 @@ export default defineComponent({
     </div>
   </main>
 </template>
+
+<!--  -->
 
 <style lang="scss">
 @import "../../styles/variables.scss";

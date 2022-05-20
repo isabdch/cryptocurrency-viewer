@@ -36,6 +36,8 @@ export default defineComponent({
 });
 </script>
 
+<!--  -->
+
 <template>
   <label class="view_price_date"
     >View price on a specific date:
@@ -47,6 +49,8 @@ export default defineComponent({
     />
   </label>
 </template>
+
+<!--  -->
 
 <style lang="scss">
 @import "../../../styles/variables.scss";

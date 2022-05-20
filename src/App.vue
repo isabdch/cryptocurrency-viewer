@@ -3,10 +3,14 @@ import Main from "./components/Main/Main.vue";
 import Header from "./components/Header/Header.vue";
 </script>
 
+ <!--  -->
+
 <template>
   <Header />
   <Main />
 </template>
+
+<!--  -->
 
 <style lang="scss">
 @import "./styles/variables.scss";

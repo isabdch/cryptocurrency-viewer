@@ -4,12 +4,16 @@ export default {
 };
 </script>
 
+<!--  -->
+
 <template>
   <header>
     <img src="../../../public/page_icon.svg" alt="Bitcoin" />
     <h1>Cryptocurrency Viewer</h1>
   </header>
 </template>
+
+<!--  -->
 
 <style lang="scss">
 @import "../../styles/variables.scss";

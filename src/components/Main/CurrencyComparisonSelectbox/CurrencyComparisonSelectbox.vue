@@ -12,6 +12,8 @@ export default defineComponent({
 });
 </script>
 
+<!--  -->
+
 <template>
   <label class="currency_comparison_selectbox"
     >Price in:
@@ -28,6 +30,8 @@ export default defineComponent({
     </select>
   </label>
 </template>
+
+<!--  -->
 
 <style lang="scss">
 @import "../../../styles/variables.scss";
