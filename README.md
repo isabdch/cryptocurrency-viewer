@@ -7,9 +7,9 @@
 ![](https://img.shields.io/github/stars/isabdch/cryptocurrency-viewer?color=%2397f600&style=for-the-badge)
 ![](https://img.shields.io/github/license/isabdch/cryptocurrency-viewer?color=%2397f600&style=for-the-badge)
 
-## [SITE HERE](https://isabdch.github.io/cryptocurrency-viewer/)
+## [SITE HERE](https://cinefinder-isabdch.vercel.app/)
 
-![](/github/gif-readme-1.gif)
+![](/public/assets/images/printscreen.png)
 
 ---
 
@@ -25,19 +25,19 @@
 
 ## ✏️ Project Description
 
-This application was developed to demonstrate my skills regarding the technologies used in this project and my logical thinking. This project's purpose is to show the price of cryptocurrencies in real-time. For that, I integrated the [CoinGecko API](https://www.coingecko.com/en/api/documentation) in a way that the price automatically updates without the need of refreshing the page.
+A fully responsive website for searching for movies. Consuming TMDB API.
 
 <br />
 
 ## 🖥️ Technologies
 
-- ### TypeScript;
+- ### JavaScript;
 
-- ### VueJs;
+- ### Next.js;
 
 - ### Axios;
 
-- ### SCSS;
+- ### Styled Component;
 
 <br />
 
@@ -45,10 +45,11 @@ This application was developed to demonstrate my skills regarding the technologi
 
 The user can:
 
-- View the price of Bitcoin and other cryptocurrencies in real-time;
-- View other info about the cryptocurrencies such as price change percentage per day;
-- Search for the price history of Bitcoin and other cryptocurrencies by specifying date;
-- Compare the price of cryptocurrencies with other currencies.
+- View trending movies of the week;
+- Surf through multiples movies genres;
+- Discover movies;
+- Search for a specific movie and its info;
+- Enable or disable dark mode.
 
 <br />
 
